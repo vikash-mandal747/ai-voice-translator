@@ -1,0 +1,41 @@
+ .globe {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #000, #222);
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset -15px -15px 30px rgba(255, 255, 255, 0.1),
+                  inset 15px 15px 30px rgba(0, 0, 0, 0.6),
+                  0 0 20px rgba(0, 0, 0, 0.9);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    /* Hidden checkbox */
+    #toggle {
+      display: none;
+    }
+
+    /* When checked, globe grows */
+    #toggle:checked ~ .globe {
+      transform: scale(1.5);
+    }
+
+    /* Button styling */
+    label {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #444;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      width: fit-content;
+      transition: background 0.3s;
+    }
+
+    label:hover {
+      background: #666;
+    }
